@@ -27,7 +27,7 @@ var JSONReporter = function (baseReporterDecorator, config, helper, logger) {
   this.onSpecComplete = function (browser, result) {
     history.result[browser.id] = history.result[browser.id] || []
     history.result[browser.id].push(result)
-
+    console.log(browser);
     history.browsers[browser.id] = history.browsers[browser.id] || browser
   }
 
